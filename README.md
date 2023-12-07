@@ -17,7 +17,7 @@ charges     1.000000
 * Distribution of charges for smokers and non-smokers
 * Distribution of genders
 * Distribution of Age
-* 
+* Distribution of Age VS Charges (non-smokers)
 
 ## Visualizition Analysis
 
@@ -38,9 +38,11 @@ Also we can notice that more male smokers than women smokers. It can be assumed 
 *Most of the patients are between 20 to 60 years old.*
 
 
-![Image 4](./plots/number_of_smokers_and_non_smokers.png)
+![Image 5](./plots/number_of_smokers_and_non_smokers.png)
 *The number of smokers and non-smokers (18 years old)*
 
+![Image 6](./plots/Distribution_of_charges_and_age_for_non_smokers.png)
+*Distribution of charges and age for non-smokers*
 
 
 

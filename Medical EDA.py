@@ -103,6 +103,53 @@ pl.title("The number of smokers and non-smokers (18 years old)")
 
 
 
+# =============================================================================
+# PART 5: Distribution of Age VS Charges (non-smokers)
+# =============================================================================
+
+
+
+g = sns.jointplot(x="age", y="charges", data = data[(data.smoker == 0)],kind="kde", color="m")
+g.plot_joint(pl.scatter, c="w", s=30, linewidth=1, marker="+")
+g.ax_joint.collections[0].set_alpha(0)
+g.set_axis_labels("$X$", "$Y$")
+ax.set_title('Distribution of charges and age for non-smokers')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
