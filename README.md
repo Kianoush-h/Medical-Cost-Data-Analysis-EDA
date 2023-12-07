@@ -15,7 +15,8 @@ charges     1.000000
 ```
 
 * Distribution of charges for smokers and non-smokers
-*
+* Distribution of genders
+* 
 
 ## Visualizition Analysis
 
@@ -23,12 +24,13 @@ charges     1.000000
 ![Image 1](./plots/Correlation_Matrix.png)
 *A strong correlation is observed only with the fact of smoking the patient. To be honest, I expected a higher correlation with bmi. Well. We investigate smoking in more detail.*
 
-![Image 1](./plots/Distribution_of_charges_for_smokers_non_smokers.png)
+![Image 2](./plots/Distribution_of_charges_for_smokers_non_smokers.png)
 *Smoking patients spend more on treatment. But there is a feeling that the number of non-smoking patients is greater.*
 
 
+![Image 2](./plots/Distribution_of_genders.png)
+*Note that women are coded with the symbol " 1 "and men - "0".*
 
-
-
+Also we can notice that more male smokers than women smokers. It can be assumed that the total cost of treatment in men will be more than in women, given the impact of smoking.
 
 
