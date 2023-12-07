@@ -14,7 +14,8 @@ smoker      0.787251
 charges     1.000000
 ```
 
-* 
+* Distribution of charges for smokers and non-smokers
+*
 
 ## Visualizition Analysis
 
@@ -22,7 +23,8 @@ charges     1.000000
 ![Image 1](./plots/Correlation_Matrix.png)
 *A strong correlation is observed only with the fact of smoking the patient. To be honest, I expected a higher correlation with bmi. Well. We investigate smoking in more detail.*
 
-
+![Image 1](./plots/Distribution_of_charges_for_smokers_non_smokers.png)
+*Smoking patients spend more on treatment. But there is a feeling that the number of non-smoking patients is greater.*
 
 
 

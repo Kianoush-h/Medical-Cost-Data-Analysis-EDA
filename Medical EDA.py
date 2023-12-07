@@ -22,8 +22,6 @@ warnings.filterwarnings('ignore')
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 
-
-
 data = pd.read_csv('data/insurance.csv')
 
 head = data.head()
@@ -64,19 +62,27 @@ plt.title("Correlation Matrix")
 
 
 
+# =============================================================================
+# PART 4: Distribution of charges
+# =============================================================================
+
+f= pl.figure(figsize=(12,5))
+
+ax=f.add_subplot(121)
+sns.distplot(data[(data.smoker == 1)]["charges"],color='c',ax=ax)
+ax.set_title('Distribution of charges for smokers')
+
+ax=f.add_subplot(122)
+sns.distplot(data[(data.smoker == 0)]['charges'],color='b',ax=ax)
+ax.set_title('Distribution of charges for non-smokers')
 
 
+# =============================================================================
+# PART 5: Distribution of genders
+# =============================================================================
 
 
-
-
-
-
-
-
-
-
-
+sns.catplot(x="smoker", kind="count",hue = 'sex', palette="pink", data=data)
 
 
 
