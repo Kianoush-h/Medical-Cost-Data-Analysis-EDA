@@ -29,10 +29,25 @@ charges     1.000000
 *Smoking patients spend more on treatment. But there is a feeling that the number of non-smoking patients is greater.*
 
 
-![Image 2](./plots/Distribution_of_genders.png)
+![Image 3](./plots/Distribution_of_genders.png)
 *Note that women are coded with the symbol " 1 "and men - "0".*
 
 Also we can notice that more male smokers than women smokers. It can be assumed that the total cost of treatment in men will be more than in women, given the impact of smoking.
 
-![Image 2](./plots/Distribution_of_Age.png)
+![Image 4](./plots/Distribution_of_Age.png)
 *Most of the patients are between 20 to 60 years old.*
+
+
+![Image 4](./plots/number_of_smokers_and_non_smokers.png)
+*The number of smokers and non-smokers (18 years old)*
+
+
+
+
+
+
+
+
+
+
+

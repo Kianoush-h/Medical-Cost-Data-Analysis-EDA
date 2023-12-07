@@ -95,7 +95,8 @@ pl.title("Distribution of Age")
 ax = sns.distplot(data["age"], color = 'g')
 
 
-
+sns.catplot(x="smoker", kind="count",hue = 'sex', palette="rainbow", data=data[(data.age == 18)])
+pl.title("The number of smokers and non-smokers (18 years old)")
 
 
 
