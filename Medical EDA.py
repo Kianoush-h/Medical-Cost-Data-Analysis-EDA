@@ -20,6 +20,9 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
 from sklearn.preprocessing import LabelEncoder
+import matplotlib.pyplot as plt
+
+
 
 data = pd.read_csv('data/insurance.csv')
 
@@ -45,13 +48,19 @@ data.smoker = le.transform(data.smoker)
 le.fit(data.region.drop_duplicates()) 
 data.region = le.transform(data.region)
 
+# =============================================================================
+# Part 2: Correlation Matrix
+# =============================================================================
+
+data.corr()['charges'].sort_values()
 
 
+f, ax = pl.subplots(figsize=(10, 8))
+corr = data.corr()
+sns.heatmap(corr, mask=np.zeros_like(corr, dtype=np.bool), cmap=sns.diverging_palette(240,10,as_cmap=True),
+            square=True, ax=ax)
 
-
-
-
-
+plt.title("Correlation Matrix")
 
 
 
