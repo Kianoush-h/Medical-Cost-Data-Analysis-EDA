@@ -214,6 +214,47 @@ print(plr.score(X_test,Y_test))
 
 # RandomForestRegressor
 
+forest = RandomForestRegressor(n_estimators = 100,
+                              # criterion = 'mse',
+                              random_state = 1,
+                              n_jobs = -1)
+forest.fit(x_train,y_train)
+forest_train_pred = forest.predict(x_train)
+forest_test_pred = forest.predict(x_test)
+
+print('MSE train data: %.3f, MSE test data: %.3f' % (
+mean_squared_error(y_train,forest_train_pred),
+mean_squared_error(y_test,forest_test_pred)))
+print('R2 train data: %.3f, R2 test data: %.3f' % (
+r2_score(y_train,forest_train_pred),
+r2_score(y_test,forest_test_pred)))
+
+
+
+pl.figure(figsize=(10,6))
+
+pl.scatter(forest_train_pred,forest_train_pred - y_train,
+          c = 'black', marker = 'o', s = 35, alpha = 0.5,
+          label = 'Train data')
+pl.scatter(forest_test_pred,forest_test_pred - y_test,
+          c = 'c', marker = 'o', s = 35, alpha = 0.7,
+          label = 'Test data')
+pl.xlabel('Predicted values')
+pl.ylabel('Tailings')
+pl.legend(loc = 'upper left')
+pl.hlines(y = 0, xmin = 0, xmax = 60000, lw = 2, color = 'red')
+pl.show()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
