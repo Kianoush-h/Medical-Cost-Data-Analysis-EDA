@@ -58,7 +58,8 @@ With a value equal to 30 starts obesity. let's look at the distribution of costs
 ![Image 9](./plots/Distribution_of_charges_for_patients_with_critical_BMI.png)
 *Distribution of costs in patients with BMI greater than 30 and less than 30*
 
-
+![Image 10](./plots/Distribution_of_and_Chargesnad_BMI.png)
+*Distribution of BMI and Charges*
 
 
 

@@ -153,10 +153,17 @@ pl.title("Distribution of charges for patients with BMI less than 30")
 ax = sns.distplot(data[(data.bmi < 30)]['charges'], color = 'b')
 
 
+# =============================================================================
+# PART 7: Distribution of BMI and Charges
+# =============================================================================
 
 
 
-
+g = sns.jointplot(x="bmi", y="charges", data = data,kind="kde", color="r")
+g.plot_joint(pl.scatter, c="w", s=30, linewidth=1, marker="+")
+g.ax_joint.collections[0].set_alpha(0)
+g.set_axis_labels("$X$", "$Y$")
+ax.set_title('Distribution of bmi and charges')
 
 
 
