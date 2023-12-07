@@ -20,6 +20,10 @@ charges     1.000000
 * Distribution of Age VS Charges (non-smokers)
 * Distribution of Age VS Charges (smokers)
 * Distribution of BMI
+* Distribution of BMI and Charges
+* Predict the cost of treatment
+** LinearRegression: 0.7962732059725784
+** LinearRegression (PolynomialFeatures): 0.8849197344147238
 
 ## Visualizition Analysis
 
