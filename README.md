@@ -16,6 +16,7 @@ charges     1.000000
 
 * Distribution of charges for smokers and non-smokers
 * Distribution of genders
+* Distribution of Age
 * 
 
 ## Visualizition Analysis
@@ -33,4 +34,5 @@ charges     1.000000
 
 Also we can notice that more male smokers than women smokers. It can be assumed that the total cost of treatment in men will be more than in women, given the impact of smoking.
 
-
+![Image 2](./plots/Distribution_of_Age.png)
+*Most of the patients are between 20 to 60 years old.*

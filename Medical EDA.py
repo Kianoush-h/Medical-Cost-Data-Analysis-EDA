@@ -85,9 +85,14 @@ ax.set_title('Distribution of charges for non-smokers')
 sns.catplot(x="smoker", kind="count",hue = 'sex', palette="pink", data=data)
 
 
+# =============================================================================
+# PART 5: Distribution of Ages
+# =============================================================================
 
 
-
+pl.figure(figsize=(12,5))
+pl.title("Distribution of Age")
+ax = sns.distplot(data["age"], color = 'g')
 
 
 
