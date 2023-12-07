@@ -24,6 +24,7 @@ charges     1.000000
 * Predict the cost of treatment
 ** LinearRegression: 0.7962732059725784
 ** LinearRegression (PolynomialFeatures): 0.8849197344147238
+** RandomForestRegressor: 0.89
 
 ## Visualizition Analysis
 
@@ -65,6 +66,8 @@ With a value equal to 30 starts obesity. let's look at the distribution of costs
 ![Image 10](./plots/Distribution_of_and_Chargesnad_BMI.png)
 *Distribution of BMI and Charges*
 
+![Image 11](./plots/model_results.png)
+*Model Results*
 
 
 
