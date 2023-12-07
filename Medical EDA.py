@@ -104,7 +104,7 @@ pl.title("The number of smokers and non-smokers (18 years old)")
 
 
 # =============================================================================
-# PART 5: Distribution of Age VS Charges (non-smokers)
+# PART 5-1: Distribution of Age VS Charges (non-smokers)
 # =============================================================================
 
 
@@ -120,18 +120,37 @@ ax.set_title('Distribution of charges and age for non-smokers')
 
 
 
+# =============================================================================
+# PART 5-2: Distribution of Age VS Charges (smokers)
+# =============================================================================
+
+
+g = sns.jointplot(x="age", y="charges", data = data[(data.smoker == 1)],kind="kde", color="c")
+g.plot_joint(pl.scatter, c="w", s=30, linewidth=1, marker="+")
+g.ax_joint.collections[0].set_alpha(0)
+g.set_axis_labels("$X$", "$Y$")
+ax.set_title('Distribution of charges and age for smokers')
+
+
+# =============================================================================
+# PART 6: Distribution of BMI
+# =============================================================================
+
+pl.figure(figsize=(12,5))
+pl.title("Distribution of bmi")
+ax = sns.distplot(data["bmi"], color = 'm')
 
 
 
 
+pl.figure(figsize=(12,5))
+pl.title("Distribution of charges for patients with BMI greater than 30")
+ax = sns.distplot(data[(data.bmi >= 30)]['charges'], color = 'm')
 
 
-
-
-
-
-
-
+pl.figure(figsize=(12,5))
+pl.title("Distribution of charges for patients with BMI less than 30")
+ax = sns.distplot(data[(data.bmi < 30)]['charges'], color = 'b')
 
 
 

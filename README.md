@@ -18,6 +18,8 @@ charges     1.000000
 * Distribution of genders
 * Distribution of Age
 * Distribution of Age VS Charges (non-smokers)
+* Distribution of Age VS Charges (smokers)
+* Distribution of BMI
 
 ## Visualizition Analysis
 
@@ -45,8 +47,16 @@ Also we can notice that more male smokers than women smokers. It can be assumed 
 *Distribution of charges and age for non-smokers*
 
 
+![Image 7](./plots/Distribution_of_charges_and_age_for_smokers.png)
+*Distribution of charges and age for smokers*
 
+![Image 8](./plots/Distribution_of_BMI.png)
+*Distribution of BMI*
 
+With a value equal to 30 starts obesity. let's look at the distribution of costs in patients with BMI greater than 30 and less than 30.
+
+![Image 9](./plots/Distribution_of_charges_for_patients_with_critical_BMI.png)
+*Distribution of costs in patients with BMI greater than 30 and less than 30*
 
 
 
