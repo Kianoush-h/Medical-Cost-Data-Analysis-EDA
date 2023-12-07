@@ -22,6 +22,13 @@ warnings.filterwarnings('ignore')
 from sklearn.preprocessing import LabelEncoder
 import matplotlib.pyplot as plt
 
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.metrics import r2_score,mean_squared_error
+from sklearn.ensemble import RandomForestRegressor
+
+
 data = pd.read_csv('data/insurance.csv')
 
 head = data.head()
@@ -167,16 +174,45 @@ ax.set_title('Distribution of bmi and charges')
 
 
 
+# =============================================================================
+# PART 8: ML Model
+# =============================================================================
+
+# LinearRegression 
+
+x = data.drop(['charges'], axis = 1)
+y = data.charges
+
+x_train,x_test,y_train,y_test = train_test_split(x,y, random_state = 0)
+lr = LinearRegression().fit(x_train,y_train)
+
+y_train_pred = lr.predict(x_train)
+y_test_pred = lr.predict(x_test)
+
+print(lr.score(x_test,y_test))
+
+
+# LinearRegression (PolynomialFeatures)
+
+X = data.drop(['charges','region'], axis = 1)
+Y = data.charges
 
 
 
+quad = PolynomialFeatures (degree = 2)
+x_quad = quad.fit_transform(X)
+
+X_train,X_test,Y_train,Y_test = train_test_split(x_quad,Y, random_state = 0)
+
+plr = LinearRegression().fit(X_train,Y_train)
+
+Y_train_pred = plr.predict(X_train)
+Y_test_pred = plr.predict(X_test)
+
+print(plr.score(X_test,Y_test))
 
 
-
-
-
-
-
+# RandomForestRegressor
 
 
 
